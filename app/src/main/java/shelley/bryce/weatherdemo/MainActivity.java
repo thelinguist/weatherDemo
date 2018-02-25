@@ -37,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
 //                WeatherReportApp.getInstance().setReports(getTestData());
 
 
-                reportsAdapter = new WeatherReportsAdapter(WeatherReportApp.getInstance().getReports(), getApplicationContext());
+                ArrayList<WeatherReport> reportsAsArray = new ArrayList<>();
+                reportsAsArray.addAll(WeatherReportApp.getInstance().getReports().values());
+                reportsAdapter = new WeatherReportsAdapter(reportsAsArray, getApplicationContext());
 //        reportsAdapter = new WeatherReportsAdapter(WeatherReportApp.getInstance().getReports(), getApplicationContext());
                 citiesListView.setAdapter(reportsAdapter);
                 final LinearLayoutManager manager = new LinearLayoutManager(getApplicationContext());

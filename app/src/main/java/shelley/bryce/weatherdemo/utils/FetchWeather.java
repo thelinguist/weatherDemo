@@ -96,8 +96,7 @@ public class FetchWeather extends AsyncTask<String, Void, String> {
     }
 
     private void parseJSON() {
-//        HashMap<String, WeatherReport> reports = new HashMap<>(); //TODO convert to Hashmap if dynamically adding more cities
-        ArrayList<WeatherReport> reports = new ArrayList();
+        HashMap<String, WeatherReport> reports = new HashMap<>(); //TODO convert to Hashmap if dynamically adding more cities
         try {
             for (int i = 0; i < JSONstuff.getJSONArray("list").length(); i++) {
                 JSONObject report = JSONstuff.getJSONArray("list").getJSONObject(i);
@@ -107,8 +106,7 @@ public class FetchWeather extends AsyncTask<String, Void, String> {
 //                Double hi = report.getJSONObject("main").getDouble("temp_max");
 //                Double precip = report.getJSONObject("main").getDouble("humidity");
 
-//                reports.put(report.getString("id"), new WeatherReport(
-                reports.add(new WeatherReport(
+                reports.put(report.getString("id"), new WeatherReport(
                         report.getString("name"),
                         report.getString("id"),
                         report.getJSONArray("weather").getJSONObject(0).getString("icon"),
@@ -121,25 +119,5 @@ public class FetchWeather extends AsyncTask<String, Void, String> {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        //{
-        // "cnt":3,
-        // "list":[{
-            //  "coord":{
-        //          "lon":-111.89,"lat":40.76},
-        //      "sys":{
-        //          "type":1,
-        //          "id":2802,"message":0.004,"country":"US","sunrise":1519567566,"sunset":1519607719},
-        //      "weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],
-        //      "main":{"temp":271.32,"pressure":1023,"humidity":37,"temp_min":270.15,"temp_max":274.15},
-        //      "visibility":16093,
-        //      "wind":{"speed":2.6,"deg":90},
-        //      "clouds":{"all":40},
-        //      "dt":1519590846,
-        //      "id":5780993,
-        //      "name":"Salt Lake City"
-        //  },{
-        //      "coord":{
-        //          "lon":-122.42,"lat":37.77},"sys":{"type":1,"id":478,"message":0.0056,"country":"US","sunrise":1519569919,"sunset":1519610417},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],"main":{"temp":285.88,"pressure":1027,"humidity":58,"temp_min":284.15,"temp_max":288.15},"visibility":16093,"wind":{"speed":2.6,"deg":50},"clouds":{"all":1},"dt":1519590846,"id":5391959,"name":"San Francisco"},{"coord":{"lon":-74.01,"lat":40.71},"sys":{"type":1,"id":1969,"message":0.0052,"country":"US","sunrise":1519558482,"sunset":1519598624},"weather":[{"id":701,"main":"Mist","description":"mist","icon":"50d"},{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"main":{"temp":279.07,"pressure":1015,"humidity":93,"temp_min":278.15,"temp_max":280.15},"visibility":16093,"wind":{"speed":3.6,"deg":30},"clouds":{"all":90},"dt":1519590846,"id":5128581,"name":"New York"}]}
-
     }
 }

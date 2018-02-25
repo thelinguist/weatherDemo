@@ -3,19 +3,14 @@ package shelley.bryce.weatherdemo.utils;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.util.Log;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * Created by Bryce on 2/25/18.
+ * Created by Bryce on 2/24/18.
  */
 
 public class FetchGraphic extends AsyncTask<String, Void, Bitmap> {
