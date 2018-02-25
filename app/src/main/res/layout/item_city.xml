@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/city_list_item"
+    android:layout_height="90dp">
+
+    <ImageView
+        android:id="@+id/weather_list_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="5dp"
+        android:contentDescription="@string/default_city_description"
+        android:scaleType="centerCrop" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/weather_list_icon"
+        android:layout_centerVertical="true">
+
+
+            <!--<android.support.constraint.ConstraintLayout-->
+                <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+                <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <TextView
+                    android:id="@+id/city_name_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:scrollHorizontally="true"
+                    android:text="@string/default_city_name"
+                    android:textSize="25sp"/>
+        <!--app:layout_widthPercent="80%"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/city_temp_view"-->
+                    <!--app:layout_constraintStart_toStartOf="parent" />-->
+
+                <TextView
+                    android:id="@+id/city_temp_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:maxLines="1"
+                    android:text="@string/default_city_temp"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="25sp"/>
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_widthPercent="20%" />-->
+
+
+            <!--</android.support.constraint.ConstraintLayout>-->
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Weather Demo</string>
+    <string name="action_settings">Settings</string>
+    <string name="addCity">Add a city</string>
+    <string name="default_city_description">Weather Icon</string>
+    <string name="default_city_name">City, State</string>
+    <string name="default_city_temp">70º</string>
+    <string name="current_temp_text">Current Temp</string>
+    <string name="todays_high">Today\'s High</string>
+    <string name="todays_low">Today\'s Low</string>
+    <string name="chance_precip">Current Humidity</string>
+    <string name="deafult_precip">0%</string>
+    <string name="default_weather_toolbar_text">Weather Report</string>
+</resources>
