@@ -26,7 +26,7 @@ import shelley.bryce.weatherdemo.models.WeatherReportApp;
 
 public class FetchWeather extends AsyncTask<String, Void, String> {
     String baseURL = "http://api.openweathermap.org/data/2.5/";
-    String apikey = "da65fafb6cb9242168b7724fb5ab75e7";
+    String apikey = "";
     String units = "imperial";
     private JSONObject JSONstuff;
 
